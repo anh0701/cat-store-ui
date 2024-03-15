@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:cat_store_ui/components/pages/login_page.dart';
+import 'package:cat_store_ui/components/tokens/color.dart';
 import 'package:flutter/material.dart';
 
 
@@ -62,10 +63,10 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white,
+              color: ColorsField.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
+                  color: ColorsField.bShadow,
                   blurRadius: 2.0,
                   offset: Offset(5.0, 3.0),
                   spreadRadius: 2.0,
