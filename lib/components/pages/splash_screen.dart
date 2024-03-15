@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cat_store_ui/views/screens/login_page.dart';
+import 'package:cat_store_ui/components/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Center(
               child: ClipOval(
                 // child: Icon(Icons.mark_chat_read_outlined, size: 128,), //put your logo here
-                child: Image.asset("assets/img/logo.png", height: 128),
+                child: Image.asset("lib/assets/images/logo.png", height: 128),
               ),
             ),
             decoration: BoxDecoration(

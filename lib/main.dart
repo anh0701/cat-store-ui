@@ -1,4 +1,4 @@
-import 'package:cat_store_ui/views/screens/splash_screen.dart';
+import 'package:cat_store_ui/components/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
