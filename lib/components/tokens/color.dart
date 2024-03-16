@@ -15,7 +15,7 @@ class ColorsField{
   static Color background = HexColor.fromHex('#F28F8F');
   static Color secondBackground = HexColor.fromHex('#CE8BF8');
   static Color buttonColor = HexColor.fromHex('#D58CE5');
-  static Color textPurple = HexColor.fromHex('#D78CDE');
+  static Color textPurple = HexColor.fromHex('#9A39D7');
   static Color textStatus = HexColor.fromHex('#64D2A4');
   static Color iconColor = HexColor.fromHex('#CB82F8');
   static Color selectedItemColor = HexColor.fromHex('#BA68C8');
