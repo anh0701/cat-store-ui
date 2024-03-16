@@ -12,6 +12,15 @@ class ColorsField{
   static Color muted = HexColor.fromHex('#6c757d');
   static Color white = HexColor.fromHex('#fff');
   static Color bShadow = Colors.black.withOpacity(0.3);
+  static Color background = HexColor.fromHex('#F28F8F');
+  static Color secondBackground = HexColor.fromHex('#CE8BF8');
+  static Color buttonColor = HexColor.fromHex('#D58CE5');
+  static Color textPurple = HexColor.fromHex('#D78CDE');
+  static Color textStatus = HexColor.fromHex('#64D2A4');
+  static Color iconColor = HexColor.fromHex('#CB82F8');
+  static Color selectedItemColor = HexColor.fromHex('#BA68C8');
+  static Color unselectedItemColor = HexColor.fromHex('#C4C4C4');
+  static Color textDanger = HexColor.fromHex('#FF7171');
 }
 
 extension HexColor on Color {
