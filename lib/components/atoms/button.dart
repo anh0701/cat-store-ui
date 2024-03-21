@@ -10,17 +10,14 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        width: width,
-        child: TextButton(
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(color),
-          ),
-          onPressed: callback,
-          child: child,
+    return SizedBox(
+      width: width,
+      child: TextButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(color),
         ),
+        onPressed: callback,
+        child: child,
       ),
     );
   }
