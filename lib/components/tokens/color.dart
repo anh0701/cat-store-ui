@@ -21,7 +21,7 @@ class ColorsField{
   static Color selectedItemColor = HexColor.fromHex('#BA68C8');
   static Color unselectedItemColor = HexColor.fromHex('#C4C4C4');
   static Color textDanger = HexColor.fromHex('#FF7171');
-  static Color inputField = HexColor.fromHex('#EDEDED');
+  static Color inputField = HexColor.fromHex('#bdc1c6');
 }
 
 extension HexColor on Color {

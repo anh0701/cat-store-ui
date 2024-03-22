@@ -6,6 +6,7 @@ import 'package:cat_store_ui/components/pages/home_page.dart';
 import 'package:cat_store_ui/components/templates/login.dart';
 import 'package:cat_store_ui/components/tokens/color.dart';
 import 'package:cat_store_ui/components/tokens/size.dart';
+import 'package:cat_store_ui/service/service_fake.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -88,10 +89,16 @@ class _LoginPageState extends State<LoginPage> {
             margin: EdgeInsets.only(bottom: 40),
             child: Button(
                 callback: () {
-                  Navigator.pushReplacement(
+                  Map<String, dynamic> data = {
+                    'username' : email.text,
+                    'password': password.text
+                  };
+                  if(callApiFake(data) != null) {
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const HomePage()));
+                  }
                 },
                 width: MediaQuery.of(context).size.width * 3 / 4 - 10,
                 color: ColorsField.buttonColor,
