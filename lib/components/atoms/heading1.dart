@@ -9,7 +9,7 @@ class Heading1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: SizesField.h1, fontWeight: FontWeight.bold),
+      style: contrastTextBold,
     );
   }
 }

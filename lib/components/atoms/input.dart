@@ -1,4 +1,5 @@
 import 'package:cat_store_ui/components/tokens/color.dart';
+import 'package:cat_store_ui/components/tokens/size.dart';
 import 'package:flutter/material.dart';
 
 Widget Input(
@@ -94,3 +95,68 @@ Widget Input(
     );
   }
 }
+
+
+TextField TextInput(String hintText,
+    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+  return TextField(
+    onTap: onTap,
+    onChanged: onChanged,
+    onEditingComplete: onEditingComplete,
+    onSubmitted: onSubmitted,
+    cursorColor: ColorsField.primary,
+    style: inputFieldTextStyle,
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: ColorsField.inputField,
+        hintText: hintText,
+        hintStyle: inputFieldHintTextStyle,
+        // focusedBorder: inputFieldFocusedBorderStyle,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        border: inputFieldNoBorderStyle),
+  );
+}
+
+TextField EmailInput(String hintText,
+    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+  return TextField(
+    onTap: onTap,
+    onChanged: onChanged,
+    onEditingComplete: onEditingComplete,
+    onSubmitted: onSubmitted,
+    keyboardType: TextInputType.emailAddress,
+    cursorColor: ColorsField.primary,
+    style: inputFieldTextStyle,
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: ColorsField.inputField,
+        hintText: hintText,
+        hintStyle: inputFieldHintTextStyle,
+        // focusedBorder: inputFieldFocusedBorderStyle,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        border: inputFieldNoBorderStyle),
+  );
+}
+
+
+TextField PasswordInput(String hintText,
+    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+  return TextField(
+    onTap: onTap,
+    onChanged: onChanged,
+    onEditingComplete: onEditingComplete,
+    onSubmitted: onSubmitted,
+    obscureText: true,
+    cursorColor: ColorsField.primary,
+    style: inputFieldHintPaswordTextStyle,
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: ColorsField.inputField,
+        hintText: hintText,
+        hintStyle: inputFieldHintPaswordTextStyle,
+        // focusedBorder: inputFieldFocusedBorderStyle,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        border: inputFieldNoBorderStyle),
+  );
+}
+

@@ -43,6 +43,48 @@ Map<String, dynamic> users = {
       "objectId": "65f55fc26538ebad4546428b"
     },
     {
+      "status": "disabled",
+      "name": {
+        "first": "Aaliyah",
+        "middle": "Angel",
+        "last": "Kessler"
+      },
+      "username": "Anh",
+      "password": "1",
+      "emails": [
+        "Anika8@example.com",
+        "Oceane_Kuphal@example.com"
+      ],
+      "phoneNumber": "(489) 633-0143 x076",
+      "location": {
+        "street": "3100 Holly Locks",
+        "city": "Redding",
+        "state": "Rhode Island",
+        "country": "Holy See (Vatican City State)",
+        "zip": "25439-2449",
+        "coordinates": {
+          "latitude": 5.2541,
+          "longitude": 24.5775
+        }
+      },
+      "website": "https://treasured-descent.info/",
+      "domain": "fat-packet.info",
+      "job": {
+        "title": "Regional Solutions Consultant",
+        "descriptor": "Chief",
+        "area": "Security",
+        "type": "Agent",
+        "company": "Koss - Corkery"
+      },
+      "creditCard": {
+        "number": "6473-5766-2989-6212",
+        "cvv": "893",
+        "issuer": "diners_club"
+      },
+      "uuid": "b716a41d-18d5-4016-935a-1104aa243965",
+      "objectId": "65f55fc26538ebad4546428b"
+    },
+    {
       "status": "active",
       "name": {
         "first": "Kris",

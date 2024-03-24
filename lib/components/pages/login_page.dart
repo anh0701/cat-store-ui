@@ -3,6 +3,7 @@ import 'package:cat_store_ui/components/atoms/heading1.dart';
 import 'package:cat_store_ui/components/atoms/input.dart';
 import 'package:cat_store_ui/components/atoms/logo.dart';
 import 'package:cat_store_ui/components/pages/home_page.dart';
+import 'package:cat_store_ui/components/pages/signup_page.dart';
 import 'package:cat_store_ui/components/templates/login.dart';
 import 'package:cat_store_ui/components/tokens/color.dart';
 import 'package:cat_store_ui/components/tokens/size.dart';
@@ -19,7 +20,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +36,10 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const Text('Don’t have an account? REGISTER'),
             Button(
+              callback: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()));
+              },
               color: ColorsField.background,
               child: Text(
                 'REGISTER',
@@ -90,22 +95,21 @@ class _LoginPageState extends State<LoginPage> {
             child: Button(
                 callback: () {
                   Map<String, dynamic> data = {
-                    'username' : email.text,
+                    'username': email.text,
                     'password': password.text
                   };
-                  if(callApiFake(data) != null) {
+                  if (callApiFake(data) != null) {
                     Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   }
                 },
                 width: MediaQuery.of(context).size.width * 3 / 4 - 10,
                 color: ColorsField.buttonColor,
                 child: Text(
                   'Login in',
-                  style:
-                      TextStyle(color: Colors.white, fontSize: SizesField.text),
+                  style: contrastText,
                 )),
           ),
         ],

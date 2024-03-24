@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorsField{
-  static Color primary = HexColor.fromHex('#007bff');
+  static const Color primary = Colors.blue;
   static Color warning = HexColor.fromHex('#ffc107');
   static Color info =  HexColor.fromHex('#17a2b8');
   static Color secondary = HexColor.fromHex('#6c757d');
