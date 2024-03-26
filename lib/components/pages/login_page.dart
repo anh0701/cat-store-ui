@@ -2,8 +2,8 @@ import 'package:cat_store_ui/components/atoms/button.dart';
 import 'package:cat_store_ui/components/atoms/heading1.dart';
 import 'package:cat_store_ui/components/atoms/input.dart';
 import 'package:cat_store_ui/components/atoms/logo.dart';
-import 'package:cat_store_ui/components/pages/home_page.dart';
 import 'package:cat_store_ui/components/pages/signup_page.dart';
+import 'package:cat_store_ui/components/pages/welcome_page.dart';
 import 'package:cat_store_ui/components/templates/login.dart';
 import 'package:cat_store_ui/components/tokens/color.dart';
 import 'package:cat_store_ui/components/tokens/size.dart';
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                            builder: (context) => const WelcomePage()));
                   }
                 },
                 width: MediaQuery.of(context).size.width * 3 / 4 - 10,
