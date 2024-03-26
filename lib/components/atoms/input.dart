@@ -98,8 +98,9 @@ Widget Input(
 
 
 TextField TextInput(String hintText,
-    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+    {onTap, onChanged, onEditingComplete, onSubmitted, controller}) {
   return TextField(
+    controller: controller,
     onTap: onTap,
     onChanged: onChanged,
     onEditingComplete: onEditingComplete,
@@ -118,8 +119,9 @@ TextField TextInput(String hintText,
 }
 
 TextField EmailInput(String hintText,
-    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+    {onTap, onChanged, onEditingComplete, onSubmitted, controller}) {
   return TextField(
+    controller: controller,
     onTap: onTap,
     onChanged: onChanged,
     onEditingComplete: onEditingComplete,
@@ -140,8 +142,9 @@ TextField EmailInput(String hintText,
 
 
 TextField PasswordInput(String hintText,
-    {onTap, onChanged, onEditingComplete, onSubmitted}) {
+    {onTap, onChanged, onEditingComplete, onSubmitted, controller}) {
   return TextField(
+    controller: controller,
     onTap: onTap,
     onChanged: onChanged,
     onEditingComplete: onEditingComplete,

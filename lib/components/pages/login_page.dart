@@ -18,7 +18,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController email = TextEditingController();
+  TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
 
   @override
@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
             Button(
               callback: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()));
+                    MaterialPageRoute(builder: (context) => const SignUpPage()));
               },
               color: ColorsField.background,
               child: Text(
@@ -53,52 +53,27 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.all(8.0),
             child: Heading1(text: 'Login'),
           ),
+            Container(
+              margin: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 1 / 8,
+                  right: MediaQuery.of(context).size.width * 1 / 8,
+                  bottom: 13),
+              child: EmailInput('Enter username...', controller: username)),
           Container(
-            margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * 1 / 8,
-                right: MediaQuery.of(context).size.width * 1 / 8),
-            child: Input(
-              controller: email,
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide.none),
-              prefixIcon: const Icon(
-                Icons.email,
-                size: 13,
-              ),
-              textInputType: TextInputType.emailAddress,
-            ),
-          ),
+              margin: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 1 / 8,
+                  right: MediaQuery.of(context).size.width * 1 / 8,
+                  bottom: 13),
+              child: PasswordInput("Enter password...", controller: password)),
           Container(
-            margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * 1 / 8,
-                right: MediaQuery.of(context).size.width * 1 / 8),
-            child: Input(
-              controller: password,
-              iconColor: Colors.black,
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide.none),
-              prefixIcon: const Icon(
-                Icons.lock,
-                size: 13,
-              ),
-              suffixIcon: Icon(
-                Icons.visibility_off,
-                size: 13,
-              ),
-              textInputType: TextInputType.visiblePassword,
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(bottom: 40),
+            margin: const EdgeInsets.only(bottom: 40),
             child: Button(
                 callback: () {
                   Map<String, dynamic> data = {
-                    'username': email.text,
+                    'username': username.text,
                     'password': password.text
                   };
-                  if (callApiFake(data) != null) {
+                  if (getUser(data) != null) {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
@@ -107,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 width: MediaQuery.of(context).size.width * 3 / 4 - 10,
                 color: ColorsField.buttonColor,
-                child: Text(
+                child: const Text(
                   'Login in',
                   style: contrastText,
                 )),
