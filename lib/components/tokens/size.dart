@@ -78,7 +78,9 @@ const inputFieldPasswordTextStyle = TextStyle(
     fontFamily: 'Poppins', fontWeight: FontWeight.w500, letterSpacing: 3);
 
 const inputFieldHintPaswordTextStyle = TextStyle(
-    fontFamily: 'Poppins', color: Color(0xff444444), letterSpacing: 2);
+    fontFamily: 'Poppins', color: Color(0xff444444), 
+    // letterSpacing: 2
+    );
 
 ///////////////////////////////////
 /// BOX DECORATION STYLES

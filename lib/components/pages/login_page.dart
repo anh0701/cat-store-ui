@@ -49,9 +49,9 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
         child: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Heading1(text: 'Login'),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Login', style: h3,),
           ),
             Container(
               margin: EdgeInsets.only(
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                 color: ColorsField.buttonColor,
                 child: const Text(
                   'Login in',
-                  style: contrastText,
+                  style: whiteText,
                 )),
           ),
         ],

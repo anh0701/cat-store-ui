@@ -1,6 +1,7 @@
 // Easily buy items for your pets
 import 'package:cat_store_ui/components/atoms/logo.dart';
 import 'package:cat_store_ui/components/pages/home_page.dart';
+import 'package:cat_store_ui/components/tokens/color.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -14,6 +15,15 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   List<PageViewModel> pages = [
     PageViewModel(
+        decoration: PageDecoration(
+            boxDecoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: FractionalOffset.bottomCenter,
+            colors: [ColorsField.secondBackground, ColorsField.background],
+            stops: [0, 1],
+          ),
+        )),
         titleWidget: Container(
           margin: const EdgeInsets.only(top: 50),
           child: Logo(
@@ -22,6 +32,15 @@ class _WelcomePageState extends State<WelcomePage> {
         ),
         body: 'Easily buy items for your pets'),
     PageViewModel(
+       decoration: PageDecoration(
+            boxDecoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: FractionalOffset.bottomCenter,
+            colors: [ColorsField.secondBackground, ColorsField.background],
+            stops: [0, 1],
+          ),
+        )),
         titleWidget: Container(
           margin: const EdgeInsets.only(top: 50),
           child: Logo(

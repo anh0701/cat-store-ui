@@ -41,9 +41,9 @@ class _SignUpPageState extends State<SignUpPage> {
               shadow: false),
         ),
         child: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Heading1(text: 'Sign Up'),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Sign Up', style: h3,),
           ),
           Container(
               margin: EdgeInsets.only(
@@ -85,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 color: ColorsField.buttonColor,
                 child: const Text(
                   'Sign Up',
-                  style: contrastText,
+                  style: whiteText,
                 )),
           )
         ],
