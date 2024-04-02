@@ -1,6 +1,6 @@
 import 'package:cat_store_ui/components/atoms/bottom_navbar.dart';
 import 'package:cat_store_ui/components/pages/profile.dart';
-import 'package:cat_store_ui/components/pages/tab_home.dart';
+import 'package:cat_store_ui/components/pages/shop_page.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       currentIndex = index;
     });
   }
-  final List<Widget> _pages = [TabHome(), ProfilePage()];
+  final List<Widget> _pages = [const ShopPage(), const ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: bottom_navbar(items: [
         const BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: 'Home',
+          label: 'Shop',
         ),
         const BottomNavigationBarItem(
           icon: Icon(Icons.person),
