@@ -1,3 +1,4 @@
+import 'package:cat_store_ui/components/pages/shop_page.dart';
 import 'package:cat_store_ui/components/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(title: 'Welcome to visit',),
+      // home: SplashScreen(title: 'Welcome to visit',),
+      home: ShopPage(),
     );
   }
 }
